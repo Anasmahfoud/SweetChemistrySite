@@ -7,6 +7,7 @@
 }
 
 .navbar-container{
+    z-index: 2;
     position: sticky;
     top: 0px;
     color: white;
@@ -109,7 +110,7 @@
     font-size: 30px;
     color: black;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/pexels-pixabay-53444.jpg");
-    padding: 200px 0;
+    padding: 150px 0;
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -128,7 +129,7 @@
 
 
 #button-contact{
-
+  
     font-size: 20px;
     border: 2px white solid;
     height: 60px;
@@ -144,12 +145,13 @@
 }
 
 #button-buy{
+    
     font-size: 20px;
-    border: 2px white solid;
+    border: 2px rgb(232, 170, 25) solid;
     height: 60px;
     width: 120px;
     color: white;
-    background-color: black;
+    background-color: rgb(232, 170, 25);
     border-radius: 10px;
     margin-left: 10px;
 }
@@ -159,9 +161,10 @@
 
 
 #button-buy:hover{
+    cursor: pointer;
     
-    border: 2px white solid;
-    background-color: rgb(40, 39, 39);
+    border: 2px rgb(188, 137, 20) solid;
+    background-color: rgb(188, 137, 20);
     
 }
 
@@ -344,6 +347,245 @@ div[class^="review-card"] h3{
 .footer-col3 img{
     text-align: center;
     margin: 2px  2px;
+
+}
+
+/* About */
+
+.hero-subcontainer{
+    height: 250px;
+    
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/pexels-pixabay-53444.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+    
+}
+
+.hero-subtext{
+   position: relative;
+   bottom: 20px;
+   padding-left: 40px;
+    text-align: start;
+    color: white;
+    font-size: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.hero-subcontainer p {
+    position: relative;
+   bottom: 20px;
+    padding: 0 0 20px 40px;
+    
+    font-size: 20px;
+}
+
+
+.our-story{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;
+}
+
+.story-text{
+   font-size: 30px;
+}
+
+.story-text h1{
+    font-size: 35px;
+    font-weight: bold;
+ }
+
+ .mission{
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    align-items: center;
+    
+    background-color: rgb(219, 208, 208);
+ }
+
+ .services-sub{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/pexels-pixabay-53444.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .services-sub h1{
+    font-weight: bold;
+    font-size: 80px;
+
+ }
+
+ .services-sub p{
+    text-align: center;
+    font-size: 25px;
+
+ }
+
+
+ .services-sub button  {
+    margin-top: 20px;
+     color: white;
+     background-color: rgb(232, 170, 25);
+     height: 60px;
+     width: 150px;
+     border:2px solid rgb(232, 170, 25) ;
+     border-radius: 4px;
+
+ }
+
+ .services-sub button :hover, .services-sub a  :hover{
+    background-color: rgb(188, 137, 20);
+    border:2px solid rgb(188, 137, 20) ;
+ }
+
+/* Login */
+
+
+.log-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 670px;
+    background-color: black;
+    background-image:linear-gradient(rgba(188, 138, 1, 0.418), rgba(249, 122, 11, 0.477)), url("../img/pexels-pixabay-53444.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log-container{
+    border: 4px solid beige;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    background-color: beige;
+    
+    width: 400px;
+    height: 580px;
+}
+
+.log-container hr{
+    width: 230px;
+    border: 1px solid rgb(171, 171, 171);
+}
+
+.log-container h1{
+    font-weight: bold;
+    margin-right: 150px ;
+    margin-bottom: 30px;
+}
+
+.log-container div input{
+    border: 2px solid gray;
+    border-radius: 4px;
+     width: 230px;
+     height: 30px;
+}
+
+#remember{
+    
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+    border: 2px solid gray;
+    border-radius: 4px;
+     width: 30px;
+     height: 17px;
+}
+
+#remember:checked{
+    accent-color:rgb(232, 170, 25) ;
+    
+}
+
+#label-remember{
+    font-size: 12px;
+    margin-right: 100px;
+    position: relative;
+    bottom: 7px;
+}
+
+.log-container button{
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+    color: white;
+    border: 2px solid rgb(232, 170, 25);
+    border-radius: 4px;
+     width: 230px;
+     height: 40px;
+     background-color: rgb(232, 170, 25);
+}
+.log-container button:hover {
+    border: 2px solid rgb(188, 137, 20);
+    border-radius: 4px;
+    background-color: rgb(188, 137, 20);
+}
+#forgot{
+    margin: 0;
+    font-size: 13px;
+    position: relative;
+    left: 67px;
+    bottom: 10px;
+    color: gray;
+}
+
+.log-container hr {
+    position: relative;
+    bottom: 30px;
+}
+
+#need-ac{
+    margin: 0;
+    position: relative;
+    font-size: 14px;
+    bottom: 60px;
+   
+}
+
+#need-ac a{
+    color: rgb(232, 170, 25);
+    text-decoration: underline;
+}
+
+.badge {
+    color: gray;
+    margin: 0;
+    position:relative;
+    bottom: 60px;
+    z-index: 1;
+}
+
+#img-log{
+    
+    position: relative;
+    bottom: 60px;
+}
+#img-log img:nth-child(2) {
+    
+    margin-left: 10px;
+}
+#img-log img:last-child{
+    
+    margin-left: 10px;
 }
 
 
@@ -360,9 +602,12 @@ div[class^="review-card"] h3{
         
         display: none;
     }
+    #logo{
+        margin-top:20px;
+    }
     .navbar-container h1{
         font-size: 20px;
-        padding: 10px ;
+        padding: 5px ;
     }
     .navbar-container{
         padding: 0;
@@ -424,7 +669,7 @@ div[class^="review-card"] h3{
     }
 
     .product-col2{
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .review-card1{
@@ -472,4 +717,204 @@ div[class^="review-card"] h3{
     .why-container{
         min-width: 300px;
     }
+
+    /* About */
+    .our-story{
+        display: flex;
+        margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 450px;
+    
+    
+    text-align: center;
 }
+
+.story-text{ margin-top: 0px;
+    font-size: 12px;
+}
+
+.our-story img{
+    height: 200px;
+    width: 350px;
+    margin-top: 10px ;
+}
+    .mission{
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        font-size: 12px ;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .mission img{
+        width: 350px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+   
+    .services-sub{
+        height: 300px;
+        margin-left: 0px;
+        font-size: 10px ;
+    }
+    .services-sub P{
+        font-size: 15px;
+    }
+    .services-sub h1{
+        font-weight: bold;
+        font-size: 45px;
+    }
+    .services-sub button{
+        height: 50px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .hero-subcontainer h1{
+        font-size: 50px;
+    }
+    .hero-subcontainer p{
+        font-size: 10px;
+    }
+    .hero-subcontainer{
+        height: 150px;
+    }
+
+    /* Login */
+
+
+.log-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 750px;
+    background-color: BLACK;
+    background-image:linear-gradient(rgba(188, 138, 1, 0.418), rgba(249, 122, 11, 0.477)), url("../img/pexels-pixabay-53444.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log-container{
+    border: 4px solid beige;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    background-color: beige;
+    width: 350px;
+    height: 650px;
+}
+
+.log-container hr{
+    width: 230px;
+    border: 1px solid rgb(171, 171, 171);
+}
+
+.log-container h1{
+    font-weight: bold;
+    margin-right: 150px ;
+    margin-bottom: 30px;
+}
+
+.log-container div input{
+    border: 2px solid gray;
+    border-radius: 4px;
+     width: 230px;
+     height: 35px;
+}
+
+#remember{
+    
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+    border: 2px solid gray;
+    border-radius: 4px;
+     width: 30px;
+     height: 17px;
+}
+
+#remember:checked{
+    accent-color:rgb(232, 170, 25) ;
+    
+}
+
+#label-remember{
+    font-size: 14.5px;
+    margin-right: 100px;
+    position: relative;
+    bottom: 7px;
+}
+
+.log-container button{
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+    color: white;
+    border: 2px solid rgb(232, 170, 25);
+    border-radius: 4px;
+     width: 230px;
+     height: 39px;
+     background-color: rgb(232, 170, 25);
+}
+.log-container button:hover {
+    border: 2px solid rgb(188, 137, 20);
+    border-radius: 4px;
+    background-color: rgb(188, 137, 20);
+}
+#forgot{
+    margin: 0;
+    font-size: 13px;
+    position: relative;
+    left: 67px;
+    bottom: 10px;
+    color: gray;
+}
+
+.log-container hr {
+    position: relative;
+    bottom: 30px;
+}
+
+#need-ac{
+    margin: 0;
+    position: relative;
+    font-size: 14px;
+    bottom: 60px;
+   
+}
+
+#need-ac a{
+    color: rgb(232, 170, 25);
+    text-decoration: underline;
+}
+
+.badge {
+    color: gray;
+    margin: 0;
+    position:relative;
+    bottom: 60px;
+    z-index: 1;
+}
+
+#img-log{
+    
+    position: relative;
+    bottom: 60px;
+}
+#img-log img:nth-child(2) {
+    
+    margin-left: 10px;
+}
+#img-log img:last-child{
+    
+    margin-left: 10px;
+}
+}
+
+
+
