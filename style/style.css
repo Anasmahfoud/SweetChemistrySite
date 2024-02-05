@@ -320,6 +320,7 @@ div[class^="product-cols"] p:last-of-type{
 }
 
 .more-home-button button:hover{
+    cursor: pointer;
     background-color: rgb(188, 137, 20) ;
     border: 2px solid rgb(188, 137, 20) ;
 }
@@ -687,7 +688,7 @@ div[class^="review-card"] img{
     position:relative;
     bottom: 40px ;
     
-    z-index: 2;
+    z-index: 1;
 }
 
 #img-log{
