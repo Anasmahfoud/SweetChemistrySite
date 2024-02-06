@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="shortcut icon" href="img//rect868.png" type="image/x-icon">
     <link rel="preload" href="img/pexels-pixabay-53444.jpg" as="image">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
      <nav class="navbar-container">
@@ -36,6 +36,16 @@
                 <a href="login.html" class="navbar-links"><img src="img/p1.png" alt="" height="25px">
                     <img src="img/p2.png" alt="" height="25px"></a>
             </li>
+            <li class="navbar-item" id="it3">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars" ></i>
+                  </a></li>
+            <div id="myLinks">
+                    <a href="index.html">HOME</a>
+                    <a href="shop.html">SHOP</a>
+                    <a href="About.html">ABOUT</a>
+                    <a href="contact.html">CONTACT</a>
+            </div>
             
         </ul>
      </nav>
@@ -94,9 +104,10 @@
      <div class="product-container">
         <div class="product-col1">
             <div class="product-img1">
-            <img src="img/acaciajar.jpg" height=400px" style="border-radius: 5px;" loading="lazy">
-            
+            <img src="img/acaciajar.jpg"  style="border-radius: 5px;" loading="lazy">
              </div>
+            <div class="addtocart"><p>+</p></div>
+            <div class="buynow"><p>BUY</p></div>
             <div class="product-cols2-info">
                 
                 <P>Acacia Jar</P> <p>10.5$</p></div>
@@ -106,6 +117,8 @@
             <div class="product-img">
             <img src="img/bluejar.jpg" loading="lazy">
             </div>
+            <div class="addtocart"><p>+</p></div>
+            <div class="buynow"><p>BUY</p></div>
             <div class="product-cols2-info"> <P>BBerry Jar </P><p>15.5$</p></div>
             
         </div>
@@ -113,6 +126,8 @@
             <div class="product-img3">
             <img src="img/manukajar.jpg" loading="lazy">
            </div>
+           <div class="addtocart"><p>+</p></div>
+            <div class="buynow"><p>BUY</p></div>
             <div class="product-cols2-info"> <P>Manu Jar</P> <p>30.5$</p></div>
         </div>
      </div>
@@ -205,6 +220,6 @@
      <div class="copy">
      <p id="copy" >&copy;Anass Mahfoud</p>
      </div>
-    
+     <script src="main.js"></script>
 </body>
 </html>

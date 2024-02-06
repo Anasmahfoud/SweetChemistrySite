@@ -6,11 +6,53 @@
     
 }
 
+
+
+
+
 body{
     overflow-x: hidden;
 }
 
 /* nav */
+
+#it3 {
+    display: none;
+    
+}
+
+#it3 i{
+    color: white;
+}
+
+#it3:hover i{
+    color:rgb(126, 122, 122);
+}
+
+/* mobile nav */
+#myLinks{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 100px;
+    right:0;
+    background-color: white;
+}
+#myLinks a{
+    color: white;
+    text-decoration: none;
+    padding: 5vw 13vw;
+    text-align: center;
+    font-size: 6vw;
+    background-color: black;
+}
+
+#myLinks a:hover {
+    background-color: white;
+    color: black;
+}
 
 .navbar-container{
     z-index: 2;
@@ -231,6 +273,7 @@ body{
 /* product */
 
 .product-container{
+    
     padding: 100px 0 0 0;
     display: flex;
     justify-content: space-around;
@@ -243,6 +286,7 @@ body{
 
 
 div [class^="product-img"]{
+    
     overflow: hidden;
     width: 85vw;
     height: 25vw;
@@ -250,12 +294,14 @@ div [class^="product-img"]{
 
 
 div[class^="product-col"]{
+    position: relative;
     height: 30vw;
     background-color:  rgb(149, 145, 145);
     border-radius: 5px;
     overflow: hidden;
     width: 20vw;
     cursor: pointer;
+    
 }
 
 div[class^="product-col"] img{
@@ -298,6 +344,82 @@ div[class^="product-cols"] p:last-of-type{
     margin-top: 15px;
     font-size: 1.5vw;
 }
+
+/* add tocart and buy button */
+div[class^="product-col"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:1vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 2.5vw;
+}
+
+div[class^="product-col"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+}
+
+div[class^="product-col"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="product-col"] .buynow{
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:5.5vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="product-col"]:hover  .buynow{
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="product-col"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
 
 /* button */
 
@@ -929,6 +1051,7 @@ margin-left: 1vw;
 }
 /*transition */
 div[class^='shop-all-r'] img{
+    
     border-radius: 5px;
     border: 1px solid transparent;
     transition-property: transform ;
@@ -940,11 +1063,13 @@ div[class^='shop-all-r'] img{
 
      /* row1 */
 .shop-all-r1-p1:hover img{
+   
     transform: scale(1.3);
     cursor: pointer;
 }
 
 .shop-all-r1-p2:hover img{
+    
     transform: scale(1.3);
     cursor: pointer;
 }
@@ -952,6 +1077,10 @@ div[class^='shop-all-r'] img{
 .shop-all-r1-p3:hover img{
     transform: scale(1.3);
     cursor: pointer;
+}
+
+div[class^="shop-all-r1-p"] {
+    position: relative;
 }
       /* row2 */
 .shop-all-r2-p1:hover img{
@@ -968,6 +1097,10 @@ div[class^='shop-all-r'] img{
     transform: scale(1.3);
     cursor: pointer;
 }
+
+div[class^="shop-all-r2-p"] {
+    position: relative;
+}
      /* row3 */
 .shop-all-r3-p1:hover img{
     transform: scale(1.3);
@@ -983,7 +1116,9 @@ div[class^='shop-all-r'] img{
     transform: scale(1.3);
     cursor: pointer;
 }
-
+div[class^="shop-all-r3-p"] {
+    position: relative;
+}
 /* row4 */
 
 
@@ -992,6 +1127,238 @@ div[class^='shop-all-row']{
     justify-content: space-evenly;
 }
 
+div[class^="shop-all-r3-p"] {
+    position: relative;
+}
+
+/* addtocart */
+
+div[class^="shop-all-r1-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:1vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 2.5vw;
+}
+
+div[class^="shop-all-r1-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+}
+
+div[class^="shop-all-r1-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r1-p"] .buynow{
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:5.5vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r1-p"]:hover  .buynow{
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r1-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
+/* r2 */
+
+div[class^="shop-all-r2-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:1vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 2.5vw;
+}
+
+div[class^="shop-all-r2-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+}
+
+div[class^="shop-all-r2-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r2-p"] .buynow{
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:5.5vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r2-p"]:hover  .buynow{
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r2-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
+/* r3 */
+
+
+div[class^="shop-all-r3-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:1vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 2.5vw;
+}
+
+div[class^="shop-all-r3-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+}
+
+div[class^="shop-all-r3-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r3-p"] .buynow{
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 3.5vw;
+    width: 3.5vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:21vw;
+    left:5.5vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r3-p"]:hover  .buynow{
+    box-shadow: 0.5vw 0vw 1.15vw rgba(9, 9, 9, 0.853);
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r3-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
 
 /* Jars page */
 #shop-product-jars-container{
@@ -1054,6 +1421,304 @@ div[class^='shop-all-row']{
 
 @media (min-width:380px) and (max-width:    1000px){
     
+
+    /* add tocart and buy button */
+div[class^="product-col"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:56vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="product-col"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="product-col"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="product-col"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:56vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="product-col"]:hover  .buynow{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="product-col"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
+/* r1 */
+div[class^="shop-all-r1-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r1-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r1-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r1-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r1-p"]:hover  .buynow{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r1-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
+/* r2 */
+
+div[class^="shop-all-r2-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r2-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r2-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r2-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r2-p"]:hover  .buynow{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r2-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+
+/* r1 */
+div[class^="shop-all-r3-p"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r3-p"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r3-p"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r3-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:46vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+div[class^="shop-all-r3-p"]:hover  .buynow{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+    
+}
+
+div[class^="shop-all-r3-p"] .buynow:hover {
+    background-color: rgb(182, 120, 3);
+    border: 2px solid rgb(182, 120, 3);
+}
+    
     
     .contact-box{
         margin-left: 2vw !important;
@@ -1073,6 +1738,16 @@ div[class^='shop-all-row']{
         padding-left: 2vw !important;
         padding-right: 2vw !important;
     }
+    /* nav */
+
+    #it3{
+        display: block;
+    }
+
+    #it3:hover{
+        color:rgb(126, 122, 122);
+    }
+
     .navbar-menu{
         
         display: none;
@@ -1820,6 +2495,261 @@ margin-left: 3vw;
 
 
 @media (max-width:    380px){
+
+    .more-home-button button {
+        background-color: rgb(232, 170, 25);
+        color: white;
+        border: 2px solid rgb(232, 170, 25);
+        width: 20vw;
+        height: 10vw;
+        font-size: 5vw;
+        border-radius: 5px;
+    }
+
+    .more-home-button{
+        margin-top: 10vw;
+        margin-bottom: 15vw;
+    }
+    
+      /* add tocart and buy button */
+div[class^="product-col"] .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:56vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="product-col"]:hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="product-col"] .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="product-col"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:56vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+/* r1 */
+div[class^="shop-all-r1-p"]  .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r1-p"] :hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r1-p"]  .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r1-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
+/* r2 */
+div[class^="shop-all-r2-p"]  .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r2-p"] :hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r2-p"]  .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r2-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+/* r3 */
+div[class^="shop-all-r3-p"]  .addtocart{
+    opacity: 0;
+    display: flex;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(227, 204, 2);
+    border: 2px solid rgb(227, 204, 2);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:3vw;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 1.5s;
+}
+
+.addtocart p{
+    color: white;
+    font-size: 7vw;
+}
+
+div[class^="shop-all-r3-p"] :hover  .addtocart{
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5vw);
+}
+
+div[class^="shop-all-r3-p"]  .addtocart:hover {
+    background-color: rgb(190, 172, 4);
+    border: 2px solid rgb(190, 172, 4);
+}
+
+div[class^="shop-all-r3-p"] .buynow{
+    font-size: 3vw;
+    color: white;
+    opacity: 0;
+    display:flex;
+    
+    text-align: center;
+    height: 10vw;
+    width: 10vw;
+    z-index: 1;
+    background-color: rgb(228, 150, 4);
+    border: 2px solid rgb(228, 150, 4);
+    border-radius: 50%;
+    position: absolute;
+    top:45vw;
+    left:16vw;
+    align-items:center ;
+    justify-content: center;
+    transition-property: all;
+    transition-duration: 1.5s;
+    
+}
+
 
     .navbar-icons{
         margin-right: 10px;
